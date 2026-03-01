@@ -5,10 +5,6 @@ created: <% tp.date.now("YYYY-MM-DD") %>
 updated:
 status: draft
 ---
-# <% tp.file.title %>
-
-## Context
-
 What problem am I solving?
 
 - 

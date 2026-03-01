@@ -6,8 +6,6 @@ created: 2026-03-01
 updated:
 status: draft
 ---
-# App renaming script approach
-
 ## Goal
 
 Make the template behave like Expo in terms of renaming, so changing app name and package identifier can be done via a single command:

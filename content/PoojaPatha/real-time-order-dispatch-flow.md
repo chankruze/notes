@@ -19,7 +19,8 @@ FCM can:
 But:
 > FCM should only trigger the flow.  
 > Your backend + WebSocket should manage the actual order state.
-# 🚀 How Uber / Zomato Do It (Conceptually)
+
+## 🚀 How Uber / Zomato Do It (Conceptually)
 
 When customer books:
 1. Backend creates active job
@@ -30,10 +31,9 @@ When customer books:
 6. Partner swipes to accept
 7. App calls backend API to confirm
 8. Backend locks job to that partner
-# 🔥 Implementation Strategy (Correct Way)
+## Implementation Strategy
 
-Using **@react-native-firebase/messaging**
-# Step 1 — Backend Sends High Priority Data Message
+### Step 1 — Backend Sends High Priority Data Message
 
 Our Rails backend should send:
 
@@ -55,7 +55,8 @@ Important:
 	- No default OS popup interference
 - Use high priority
 - Do NOT rely only on notification payload
-# Step 2 — Handle Message In App
+
+### Step 2 — Handle Message In App
 
 Inside messaging service:
 ```ts
@@ -68,17 +69,18 @@ messaging().setBackgroundMessageHandler(async remoteMessage => {
   handleIncomingOrder(remoteMessage.data);
 });
 ```
-# Step 3 — Open Full-Screen Order UI
+
+### Step 3 — Open Full-Screen Order UI
 
 We have 2 options:
-### Option A — Navigate To Screen (Normal App State)
+#### Option A — Navigate To Screen (Normal App State)
 
 ```ts
 navigation.navigate('IncomingOrder', { orderId });
 ```
 
 Works if app is foreground/background.
-### Option B — Full-Screen Intent (Android)
+#### Option B — Full-Screen Intent (Android)
 
 For Uber-style lock-screen takeover:
 
@@ -95,7 +97,8 @@ android:turnScreenOn="true"
 ```
 
 And special notification channel.
-# ⚠️ Critical Warning
+
+**⚠️ Critical Warning**
 
 FCM is unreliable for critical dispatch alone.
 
@@ -106,7 +109,8 @@ We MUST:
 - Use timeout logic server-side
 
 Never trust push payload as source of truth.
-# 🧱 Step 4 — Swipe To Accept UI
+
+###  Step 4 — Swipe To Accept UI
 
 Inside IncomingOrder screen:
 - Animated swipe button
@@ -136,7 +140,8 @@ Backend must:
 		- Use status = "available"
 		- First accept wins
 		- Others get rejected
-# Architecture Diagram
+
+## Architecture Diagram
 
 ```text
 Customer App
@@ -153,25 +158,11 @@ Accept API
      ↓
 Backend locks job
 ```
-# 🧠 Advanced Enhancement (Recommended)
 
-After receiving push:
+##  Advanced Enhancement (Recommended)
 
-Immediately open WebSocket connection to:
+After receiving push, Immediately open WebSocket connection to:
 - Subscribe to order status updates
 - Cancel UI if order taken by someone else
-
-Push = wakeup  
-WebSocket = real-time state
-
-----
-
-Template should only provide:
-- FCM setup
-- Notification abstraction
-- Background handler system
-
-next:
-- Full FCM integration architecture for your template
-- Or Uber-style Android full-screen setup
-- Or Proper Rails backend dispatch locking strategy
+- Push = wakeup  
+- WebSocket = real-time state
