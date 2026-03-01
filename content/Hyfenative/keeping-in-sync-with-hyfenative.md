@@ -1,5 +1,5 @@
 ---
-title: Keeping the project in sync with Hyfenative template
+title: Keeping the project in sync with hyfenative template
 tags:
   - react-native
 created: 2026-03-01
@@ -52,7 +52,7 @@ Create a branch dedicated to syncing boilerplate:
 git checkout -b boilerplate-sync
 ```
 
-# 🔄 When We Update hyfenative
+## When We Update hyfenative
 
 In `app-one`:
 
@@ -71,18 +71,16 @@ git checkout main
 git merge boilerplate-sync
 ```
 
-# 🧠 Golden Rule (Very Important)
+## Golden Rule (Very Important)
 
-Inside `app-one`, try to:
-
-### ✅ Keep these untouched:
+Inside `app-one`, try to keep these untouched:
 
 - Navigation root setup
 - API client core
 - Theme system
 - Config layer
 - Folder structure
-### ❌ Avoid modifying:
+### Avoid modifying:
 
 - Shared utilities
 - Core infra logic
