@@ -6,40 +6,26 @@ created: 2026-03-01
 updated:
 status: draft
 ---
-Assume:
-- `hyfenative` → main boilerplate repo
-- `app-one` → new app repo
-- `app-two` → new app repo
-
 ## Create App Repo From Template
-
-Use GitHub template to create:
-
-```
-app-one
-```
-
-Then clone it locally.
-## Add Upstream Remote
 
 Inside `app-one`:
 
 ```bash
-git remote add upstream https://github.com/chankruze/hyfenative.git
-git fetch upstream
+git clone https://github.com/chankruze/hyfenative.git app-name
+cd app-name
+git remote remove origin
+git remote add origin <new-app-repo>
+git push -u origin main
 ```
 
 Now check remotes:
 
 ```bash
 git remote -v
-```
 
-You should see:
-
-```
-origin    -> app-one
-upstream  -> hyfenative
+# should have similar to this
+# origin    -> app-one
+# upstream  -> hyfenative
 ```
 
 ## Keep Boilerplate Changes in Separate Branch
