@@ -332,3 +332,7 @@ Usage:
 - Season key
 - Promotional banners
 - Feature flags
+
+References:
+1. https://medium.com/timeless/building-the-animated-sticky-spotify-collapsible-header-with-react-native-and-reanimated-part-i-e47222dfcb85
+2. https://medium.com/timeless/building-the-animated-sticky-spotify-collapsible-header-with-react-native-and-reanimated-part-ii-ec3bff94a58a
