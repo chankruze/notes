@@ -230,6 +230,8 @@ export const TopBanner = ({ visible, children }) => {
 Auto-dismiss using timeout.
 ## Seasonal Theme Architecture
 
+We can use https://firebase.google.com/docs/remote-config also. I'll update this section when I implement this in the app.
+
 ### Principle
 
 Separate:

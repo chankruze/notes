@@ -39,11 +39,15 @@ Our Rails backend should send:
 
 ```json
 {
-  "to": "<device_token>",
-  "priority": "high",
-  "data": {
-    "type": "incoming_order",
-    "order_id": "12345"
+  "message": {
+    "token": "<DEVICE_TOKEN>",
+    "android": {
+      "priority": "HIGH"
+    },
+    "data": {
+      "type": "incoming_order",
+      "order_id": "12345"
+    }
   }
 }
 ```
