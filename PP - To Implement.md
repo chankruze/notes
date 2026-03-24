@@ -1,0 +1,2 @@
+- [ ] generate pooja start otp after booking is confirmed -> started
+- [ ] generate pooja end otp after pooja marked as started (by pandit) -> completed

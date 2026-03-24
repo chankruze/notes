@@ -1,0 +1,8 @@
+- [ ] Assignment rules
+	- [ ] Backend
+	- [ ] MGMT Portal
+- [ ] Manual partner assignment to booking
+	- [ ] Backend
+	- [ ] MGMT Portal
+- [ ] Select options for customers, pandits, vendors
+	- [ ] Backend
