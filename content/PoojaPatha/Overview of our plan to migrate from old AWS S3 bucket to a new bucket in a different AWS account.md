@@ -1,6 +1,6 @@
 ## The Plan
 
-![[Pasted image 20260617133358.png]]
+![](content/PoojaPatha/attachments/Pasted%20image%2020260617144746.png)
 
 ## What to do in the new account?
 
@@ -94,7 +94,7 @@ Setup should be:
 }
 ```
 
-![[Pasted image 20260617125709.png]]
+![](content/PoojaPatha/attachments/Pasted%20image%2020260617144809.png)
 
 ## What needs to be changed in the old account?
 
