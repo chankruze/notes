@@ -1,7 +1,18 @@
-This week I worked on:
+This week 
 
-- PR review of Ticket 5784 (Asset filters / Discovery ready-to-sync)
-- The PR is <status>
+- I was mostly working with ticket 5313 and 5314 and had a discussion with arturo regarding how we can improve the validations.
+
+- We have backend and frontend validations in place — the modal blocks confidential metadata selection, and the backend rejects saves with conflicting metadata.
+
+ - The **status changes are not blocked when a ticket already has conflicting metadata.** The backend only validates metadata fields that are present in the submitted params — so if a user just changes the ticket status without touching metadata, the validation is skipped entirely. 
+ 
+ - I was wondering if it contradicts the requirement: _"Do not let the user proceed with any changes to ticket status until resolved."_                                           
+
+
+
+
+
+-------------------------------------
 
 Then I worked on Ticket <Ticket Number> <Ticket Title>
 
