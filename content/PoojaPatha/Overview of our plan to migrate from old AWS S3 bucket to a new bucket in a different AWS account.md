@@ -94,7 +94,7 @@ Setup should be:
 }
 ```
 
-![](attachments/Pasted%20image%2020260617144809.png)
+![[Pasted image 20260617153008.png]]
 
 ## What needs to be changed in the old account?
 
