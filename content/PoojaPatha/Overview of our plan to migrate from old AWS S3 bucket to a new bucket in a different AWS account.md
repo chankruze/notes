@@ -1,6 +1,6 @@
 ## The Plan
 
-![[content/PoojaPatha/attachments/Pasted image 20260617151924.png]]
+![[Pasted image 20260617152309.png]]
 
 ## What to do in the new account?
 
