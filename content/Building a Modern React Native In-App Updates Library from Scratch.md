@@ -496,7 +496,7 @@ The total implementation is approximately 150 lines of Kotlin and 80 lines of Ty
 
 The exercise also clarified something worth remembering: **evaluate dependencies before accepting them**. A popular library is not the same as a correct library. The old-arch flag, unmaintained transitive dependency, and trivially replaceable iOS implementation were all visible from a 15-minute code review.
 
----
+----
 ## Resources
 
 - [Google Play In-App Updates API](https://developer.android.com/guide/playcore/in-app-updates)
@@ -505,3 +505,5 @@ The exercise also clarified something worth remembering: **evaluate dependencies
 - [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
 - [npm: @chankruze/react-native-in-app-updates](https://www.npmjs.com/package/@chankruze/react-native-in-app-updates)
 - [GitHub: chankruze/react-native-in-app-updates](https://github.com/chankruze/react-native-in-app-updates)
+
+*Built at [Geekofia](https://geekofia.cloud) — crafting thoughtful software for India 🇮🇳*
